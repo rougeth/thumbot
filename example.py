@@ -16,7 +16,9 @@ def handle_all_messages(message):
 
 @bot.callback_query_handler(lambda q: q.data == 'thumb_up')
 def thumb_up(callback):
-    thumbot = Thumbot(callback.message)
+    chat_id = callback.message.from_user.id
+    message_id = callback.message.message_id
+    thumbot = Thumbot(chat_id, message_id)
     if thumbot.up(callback.from_user.id):
         bot.edit_message_reply_markup(
             chat_id=callback.message.chat.id,
@@ -26,7 +28,9 @@ def thumb_up(callback):
 
 @bot.callback_query_handler(lambda q: q.data == 'thumb_down')
 def thumb_down(callback):
-    thumbot = Thumbot(callback.message)
+    chat_id = callback.message.from_user.id
+    message_id = callback.message.message_id
+    thumbot = Thumbot(chat_id, message_id)
     if thumbot.down(callback.from_user.id):
         bot.edit_message_reply_markup(
             chat_id=callback.message.chat.id,
