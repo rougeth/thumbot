@@ -7,15 +7,15 @@ class Thumbot:
     THUMBS_UP_EMOJI = '\U0001F44D'
     THUMBS_DOWN_EMOJI = '\U0001F44E'
 
-    def __init__(self, message=None):
-        if not message:
+    def __init__(self, chat=None, message=None):
+        if not chat or not message:
            return
 
         client = MongoClient()
         self.db = client.thumbot
 
-        self.chat = message.from_user.id
-        self.message = message.message_id
+        self.chat = chat
+        self.message = message
         self.check_ups_downs()
 
     def check_ups_downs(self):
