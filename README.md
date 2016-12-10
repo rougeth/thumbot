@@ -14,7 +14,7 @@
 
 ## Running
 
-- Your're going to need to run an instance of [MongoDB](https://mongodb.com). For tests porpuse (or even production, but with some concerns) you can use [Docker](https://docker.com/)  and get a container running in some minutes:
+- Your're going to need to run an instance of [MongoDB](https://mongodb.com). For tests porpuse (or even production, but with some concerns) you can run the command below to get  a [Docker](https://docker.com/) container running:
 
   `$ docker run -d -p 27017:27017 mongo`
 
