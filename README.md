@@ -42,4 +42,5 @@ Check out the [example.py](https://github.com/rougeth/thumbot/blob/master/exampl
 
 
 ### Bots and Channels using Thumbot:
-- [@on_sale](https://telegram.me/on_sale)
+- [@onsale](https://telegram.me/onsale)
+- [@centraldetudo](https://telegram.me/centraldetudo)
